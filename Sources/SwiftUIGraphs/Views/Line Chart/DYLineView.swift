@@ -71,14 +71,9 @@ public struct DYLineView<PointV: View, LabelV: View, SelectorV: View>: View, DYL
                     if self.selectedDataPoint != nil, self.settings.allowUserInteraction {
                         self.selectedDataPointAxisLines().clipped()
                     }
-                    
-                    if let _ = self.pointView {
-                        self.points()
-                    }
-                    
-                    if let _ = self.labelView {
-                        self.pointLabelViews()
-                    }
+
+                    self.points()
+                    self.pointLabelViews()
 
                     if self.settings.allowUserInteraction {
                         self.selectorView()
